@@ -1,0 +1,49 @@
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Intro to Jquery</h1>
+    <img src="pix.jpg" alt="JS" id="img1" style="width: 600px;">
+    <button class="fadeer">FADE</button>
+    <select>
+        <option>1</option>
+        <option>2</option>
+    </select>
+    <ol>
+        <li>nfs</li>
+        <li>gta</li>
+    </ol>
+    <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+    <div style="background-color: aqua;height: 100px;width: 100px;position: absolute;"><p>hey</p></div>
+    </body>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(Document).ready(function(){
+            $(".fadeer").click(function(){
+        $("#img1").slideToggle(1000);
+        $("ol li:first").toggle().css("color","red");
+         $("#div1").load("opps.txt");
+    });
+    /*$("h1").mouseenter(function(){
+            $(this).css("background-color", "red");
+        });
+        $("h1").mouseleave(function(){
+            $(this).css("background-color", "blue");
+        });*/
+
+        $("h1").on({
+            click : function(){
+                $(this).css("color","red");
+            },
+            dblclick : function(){
+                $(this).css("color","green");
+            }
+        });
+
+        $("ol li:first").click(function(){
+            $(this).hide();
+        });
+
+        });
+    </script>
+    </html>
